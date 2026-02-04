@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Year Blog • Red & Gold</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Decorative background (CSS only) -->
+  <div class="bg" aria-hidden="true">
+    <div class="glow"></div>
+    <div class="stars"></div>
+    <div class="lights"></div>
+    <div class="sparkle"></div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="top-chips">
+        <span class="chip"> NEW YEAR </span>
+        <span class="chip outline"> Red & Gold • Noël vibes</span>
+      </div>
+
+      <h1 class="big-year">CSI • 2026</h1>
+      <p class="sub">CSI wishes you a Happy New Year theme ✨</p>
+
+      <div class="countdown">
+        ⏳ Countdown: <span id="countdownText">Loading…</span>
+      </div>
+      <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-label">Total Notes</span>
+                <span class="stat-value" id="total-posts">0</span>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <!-- SECTION 1 -->
+    <section class="card">
+      <h2>📝 Create a Blog Post</h2>
+
+      <form id="blogForm" class="form">
+        <div class="row3">
+          <label>Title
+            <input id="title" type="text" placeholder="Happy New Year 🎉" required />
+          </label>
+
+          <label>Category
+            <input id="category" type="text" placeholder="Goals / Wishes / Recap" required />
+          </label>
+
+          <label>Author
+            <input id="author" type="text" placeholder="Your name" required />
+          </label>
+        </div>
+
+        <label>Content
+          <textarea id="content" rows="6" placeholder="Write something festive…" required></textarea>
+        </label>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Publish ✨</button>
+          <button class="btn" type="button" id="clearBtn">Clear</button>
+          <button class="btn danger" type="button" id="resetBtn">Reset all</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="card">
+      <h2>📚 Latest Posts</h2>
+
+      <div id="posts" class="posts"></div>
+
+      <div id="emptyState" class="empty">
+        <div class="empty-icon">🎁</div>
+        <div>
+          <div class="empty-title">No posts yet</div>
+          <div class="empty-sub">Create your first New Year post on the left ✨</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">🎆 Happy New Year • HTML + CSS + JS</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

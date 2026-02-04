@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayas' Blog | 2026</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <header>
+        <p class="subtitle">Welcome to 2026</p>
+        <h1>Mayas' Blog</h1>
+    </header>
+
+    <div class="container">
+        <div id="countdown-timer">
+            <div class="timer-segment">
+                <span id="days" class="timer-val">00</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-segment">
+                <span id="hours" class="timer-val">00</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-segment">
+                <span id="minutes" class="timer-val">00</span>
+                <span class="timer-label">Mins</span>
+            </div>
+            <div class="timer-segment">
+                <span id="seconds" class="timer-val">00</span>
+                <span class="timer-label">Secs</span>
+            </div>
+        </div>
+
+        <section class="glass-card">
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                Create a Blog Post
+            </h2>
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Happy New Year" required>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 19.2px;">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="tech">Tech</option>
+                            <option value="travel">Travel</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" placeholder="Your name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" rows="4" placeholder="What are your thoughts or plans?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Publish Post</button>
+            </form>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 32px; color: var(--accent-gold);">The 2026 Archive</h2>
+            <div id="posts-feed" class="posts-container">
+            </div>
+        </section>
+    </div>
+
+    <div id="notification">Post Published Successfully! ✨</div>
+
+    <script src="blog.js"></script>
+</body>
+</html>

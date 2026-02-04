@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hichem's Blog</title>
+  <link rel="stylesheet" href="div web.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="badge">🎄 Holiday Edition • 🎆 New Year</div>
+    <h1 class="title">yasmine blog</h1>
+    <p classe="subtitle">Create a post. See it instantly below.</p>
+
+    <div class="stats">
+      <div class="stat">
+       <small><em>Countdown</em></small>
+       <span id="countdown">4d 12h 56m 45s</span>
+      </div>
+      <div class="stat">
+        <small><em >Total Posts</em></small>
+        <span id="totalPosts">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- LEFT -->
+    <section class="card">
+      <h2>📝 Create a Blog Post</h2>
+
+      <input id="title" placeholder="Happy New Year 🎉">
+      <input id="category" placeholder="Noël / New Year">
+      <input id="author" placeholder="Your name">
+
+      <textarea id="content" placeholder="Write your wishes, goals, recap..."></textarea>
+
+      <div class="actions">
+        <button onclick="publishPost()">Publish ✨</button>
+        <button onclick="clearForm()">Clear</button>
+        <button onclick="resetAll()">Reset all</button>
+      </div>
+
+      <small class="tip">Tip: Make your post New Year-ish 🎆</small>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="card">
+      <h2>🎁 Latest Posts</h2>
+
+      <input id="search" placeholder="Search (title, author, content)" oninput="renderPosts()">
+
+      <select id="sort" onchange="renderPosts()">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+      </select>
+
+      <div id="posts" class="posts empty">
+        <p>No posts yet ✨<br>Create your first holiday post on the left 🎄</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Built with ❤️ by yasmine — HTML / CSS / JS
+  </footer>
+
+<script src="div web.js"></script>
+</body>
+</html>

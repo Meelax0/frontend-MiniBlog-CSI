@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Kamelia - Édition 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="badges">
+            <span class="badge">💖 Édition Spéciale</span>
+            <span class="badge">✨ 2026</span>
+        </div>
+        
+        <h1 class="wavy-text">Bloc de Kamelia</h1>
+        
+        <p class="subtitle">Notes, pensées et vœux pour la nouvelle année.</p>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-label">Total Notes</span>
+                <span class="stat-value" id="total-posts">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-panel create-post-section">
+            <div class="panel-header">✍️ Nouvelle Note</div>
+            
+            <div class="input-group">
+                <label for="titleInput">Titre</label>
+                <input type="text" id="titleInput" placeholder="Idée du jour...">
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="catInput">Catégorie</label>
+                    <input type="text" id="catInput" placeholder="Perso / Travail">
+                </div>
+                <div class="input-group">
+                    <label for="authorInput">Auteur</label>
+                    <input type="text" id="authorInput" placeholder="Kamelia">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="contentInput">Contenu</label>
+                <textarea id="contentInput" placeholder="Écrivez ici..."></textarea>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-primary" onclick="publishPost()">Ajouter au Bloc 📌</button>
+                <button class="btn btn-secondary" onclick="clearForm()">Effacer</button>
+                <button class="btn btn-tertiary" onclick="resetAll()">Tout vider</button>
+            </div>
+            
+            <span class="tip">Conseil : Profite de chaque seconde ✨</span>
+        </section>
+
+        <section class="card-panel latest-posts-section">
+            <div class="panel-header">📌 Mes Notes</div>
+            
+            <div class="search-row">
+                <input type="text" placeholder="Rechercher une note...">
+                <select>
+                    <option>Plus récentes</option>
+                    <option>Plus anciennes</option>
+                </select>
+            </div>
+
+            <div id="posts-container">
+                <div class="empty-state" id="empty-msg">
+                    <span class="empty-icon">📝 Le bloc est vide</span>
+                    <span class="empty-text">Ajoutez votre première note à gauche !</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Le Bloc de Kamelia — HTML / CSS / JS
+    </footer>
+
+    <script src="project.js"></script>
+</body>
+</html>
