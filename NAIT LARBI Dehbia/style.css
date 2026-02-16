@@ -1,0 +1,110 @@
+:root {
+    bg-dark: #0a0a0b;
+    --card-bg: rgba(20, 20, 22, 0.95); 
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --accent-gold: #d4af37;
+    --accent-gold-bright: #f2d06b;
+    --text-main: #e0e0e0; 
+    --input-bg: #161618;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at top, #1a1a1d 0%, #0a0a0b 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.main-header { font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+ }
+.main-header h1 { font-size: 3rem; text-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.main-header span { color: var(--accent); }
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.input-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-size: 0.9rem; opacity: 0.8; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: var(--input-bg);
+    color: white;
+    box-sizing: border-box;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.row { display: flex; gap: 15px; }
+.button-row { display: flex; gap: 10px; margin-top: 20px; }
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {background: linear-gradient(45deg, #b38728, #d4af37);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}  
+
+.post-item {
+    background: #1c1c1e;
+    border: 1px solid #2c2c2e;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+    .grid-layout { grid-template-columns: 1fr; }
+}

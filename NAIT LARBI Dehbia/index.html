@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Blog Créatif 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <h1>2026 <span>Blog Experience</span></h1>
+        </header>
+
+        <main class="grid-layout">
+            <section class="glass-card">
+                <h2>📝 Nouvelle Note</h2>
+                <form id="post-form">
+                    <div class="input-group">
+                        <label>Titre</label>
+                        <input type="text" id="title" placeholder="L'idée du jour..." required>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Catégorie</label>
+                            <input type="text" id="category" placeholder="Perso / Travail">
+                        </div>
+                        <div class="input-group">
+                            <label>Auteur</label>
+                            <input type="text" id="author" placeholder="Ton nom">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Contenu</label>
+                        <textarea id="content" rows="5" placeholder="Écrivez ici..."></textarea>
+                    </div>
+                    <div class="button-row">
+                        <button type="submit" class="btn btn-primary">Publier</button>
+                        <button type="reset" class="btn btn-secondary">Effacer</button>
+                    </div>
+                    <div class="countdown-container glass-card">
+                       <p>✨ Bonne année 2026 ! ✨</p>
+                      <div id="countdown" style="font-size: 1.5rem; font-weight: bold; color: var(--accent);">
+                        00d : 00h : 00m : 00s
+                      </div>
+</div>
+                </form>
+            </section>
+
+            <section class="glass-card">
+                <h2>📌 Mes Notes</h2>
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Rechercher une note...">
+                </div>
+                <div id="posts-list" class="posts-container">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
